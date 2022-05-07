@@ -14,3 +14,17 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root{
+  --highlight-color:  #D79D39;
+  --menu-background-color: #222;
+  --menu-color: #fff;
+  --menu-color-hover: #D79D39;
+}
+
+[dark-theme="true"] {
+  --highlight-color: #D79D39;
+  --menu-background-color: #000;
+  --menu-color: #fff;
+  --menu-color-hover: #D79D39;
+}

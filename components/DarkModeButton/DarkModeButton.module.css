@@ -1,0 +1,12 @@
+.iconButton{
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--menu-color);
+    font-size: 2.5rem;
+}
+
+.iconButton:hover{
+    color: var(--menu-color-hover);
+}

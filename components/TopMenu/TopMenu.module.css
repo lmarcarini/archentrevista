@@ -1,0 +1,52 @@
+.topMenuContainer {
+    height: 85px;
+    width: 100%;
+    background-color: var(--menu-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: var(--menu-color);
+}
+
+.iconsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconButton{
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--menu-color);
+    font-size: 2.5rem;
+}
+
+.iconButton:hover{
+    color: var(--menu-color-hover);
+}
+
+.decorativeLine{
+    width: 100%;
+    height: 3px;
+    background-color: var(--highlight-color);
+}
+
+.dropdownMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: var(--menu-background-color);
+    color: var(--menu-color);
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.inlineSearchContainer{
+    width: 70%;
+    padding: 5%
+}
