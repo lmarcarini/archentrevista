@@ -1,0 +1,19 @@
+.bannerContainer{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 545px) {
+    .imageDesktop{
+        display: none;
+    }
+}
+@media (min-width: 545px) {
+    .imageMobile{
+        display: none;
+    }
+}
