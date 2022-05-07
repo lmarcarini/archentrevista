@@ -20,6 +20,9 @@ a {
   --menu-background-color: #222;
   --menu-color: #fff;
   --menu-color-hover: #D79D39;
+  --main-background-color: #fff;
+  --main-color: #222;
+  --alter-background-color: #d0d0d0;
 }
 
 [dark-theme="true"] {
@@ -27,4 +30,6 @@ a {
   --menu-background-color: #000;
   --menu-color: #fff;
   --menu-color-hover: #D79D39;
+  --main-background-color: #222;
+  --main-color: #fff;
 }
