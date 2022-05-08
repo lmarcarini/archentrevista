@@ -24,7 +24,6 @@ export const carrinhoComprasSlice = createSlice({
   initialState,
   reducers: {
     adicionarItem: (state, action: PayloadAction<ItemCarrinho>) => {
-      //if item already exists, increase quantity
       const item = state.itens.find((i) => i.id === action.payload.id);
       if (item) {
         item.quantity += 1;
@@ -33,9 +32,19 @@ export const carrinhoComprasSlice = createSlice({
       }
       state.total += action.payload.price;
     },
+    removerItem: (state, action: PayloadAction<string>) => {
+      const item = state.itens.find((i) => i.id === action.payload);
+      if (item) {
+        item.quantity -= 1;
+        if (item.quantity === 0) {
+          state.itens = state.itens.filter((i) => i.id !== action.payload);
+        }
+        state.total -= item.price;
+      }
+    },
   },
 });
 
-export const { adicionarItem } = carrinhoComprasSlice.actions;
+export const { adicionarItem, removerItem } = carrinhoComprasSlice.actions;
 
 export default carrinhoComprasSlice.reducer;
