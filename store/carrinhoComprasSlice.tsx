@@ -15,7 +15,7 @@ interface CarrinhoCompraState {
 }
 
 const initialState: CarrinhoCompraState = {
-  itens: [{ id: "0", name: "", price: 0, quantity: 0, image: "" }],
+  itens: [],
   total: 0,
 };
 
@@ -24,7 +24,13 @@ export const carrinhoComprasSlice = createSlice({
   initialState,
   reducers: {
     adicionarItem: (state, action: PayloadAction<ItemCarrinho>) => {
-      state.itens = [...state.itens, action.payload];
+      //if item already exists, increase quantity
+      const item = state.itens.find((i) => i.id === action.payload.id);
+      if (item) {
+        item.quantity += 1;
+      } else {
+        state.itens.push(action.payload);
+      }
       state.total += action.payload.price;
     },
   },

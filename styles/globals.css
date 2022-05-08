@@ -23,6 +23,12 @@ a {
   --main-background-color: #fff;
   --main-color: #222;
   --alter-background-color: #d0d0d0;
+  --card-background-color: #fff;
+  --card-border-radius: 0.5rem;
+  --card-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  --card-box-shadow-hover: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  --card-title-color: #222;
+  --card-text-color: #222;
 }
 
 [dark-theme="true"] {
@@ -32,4 +38,10 @@ a {
   --menu-color-hover: #D79D39;
   --main-background-color: #222;
   --main-color: #fff;
+  --alter-background-color: #d0d0d0;
+  --card-background-color: #222;
+  --card-box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
+  --card-box-shadow-hover: 0px 0px 0px 0px rgb(255, 255, 255);
+  --card-title-color: #fff;
+  --card-text-color: #fff;
 }

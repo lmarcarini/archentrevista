@@ -7,14 +7,17 @@ import Link from "next/link";
 type Props = {};
 
 const ShoppingCartButton = (props: Props) => {
-  const numberOfItens = useSelector(
-    (state: RootState) => state.carrinhoCompras.itens.length
+  const numberOfItens = useSelector((state: RootState) =>
+    state.carrinhoCompras.itens.reduce(
+      (total, item) => total + item.quantity,
+      0
+    )
   );
 
   return (
     <>
       <Link href="/carrinho">
-        <>
+        <div>
           <button
             type="button"
             title="Carrinho de Compras"
@@ -25,7 +28,7 @@ const ShoppingCartButton = (props: Props) => {
               <span className={styles.numberOfItens}>{numberOfItens}</span>
             )}
           </button>
-        </>
+        </div>
       </Link>
     </>
   );
