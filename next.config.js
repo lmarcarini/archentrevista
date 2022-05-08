@@ -8,6 +8,9 @@ const nextConfig = {
     locales: ["pt-br"],
     defaultLocale: "pt-br",
   },
+  images: {
+    domains: ["localhost:3000", "via.placeholder.com"],
+  },
 };
 
 module.exports = nextConfig;

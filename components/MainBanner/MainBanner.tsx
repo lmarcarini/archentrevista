@@ -7,12 +7,18 @@ import styles from "./MainBanner.module.css";
 type Props = {};
 
 const MainBanner: React.FC = ({}: Props) => {
-  const [isMobile, setIsMobile] = useState(false);
+  //Ajusta o tamanho para ficar um pouco maior em relação a tela
+  const MAX_WIDTH = 1920;
+  const MAX_HEIGHT = 450;
+  const [size, setSize] = useState({ height: MAX_HEIGHT, width: MAX_WIDTH });
 
   useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    setIsMobile(isMobile);
-    console.log(isMobile);
+    let width = Math.min(window.innerWidth + 600, MAX_WIDTH);
+    let height = (width / size.width) * size.height;
+    setSize({
+      height: height,
+      width: width,
+    });
   }, []);
 
   return (
@@ -21,9 +27,9 @@ const MainBanner: React.FC = ({}: Props) => {
         <Image
           src={bannerImageDesktop}
           alt="banner"
-          layout={isMobile ? "intrinsic" : "fixed"}
-          height={450}
-          width={1920}
+          layout="fixed"
+          height={size.height}
+          width={size.width}
           placeholder="blur"
         />
       </div>

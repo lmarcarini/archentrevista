@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import Overlay from "../layouts/Overlay";
+import { Provider } from "react-redux";
+import { store } from "../store/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -14,9 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Overlay>
-        <Component {...pageProps} />
-      </Overlay>
+      <Provider store={store}>
+        <Overlay>
+          <Component {...pageProps} />
+        </Overlay>
+      </Provider>
     </>
   );
 }

@@ -1,0 +1,31 @@
+.container{
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card{
+    margin: 20px;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+.cardTitle{
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+}

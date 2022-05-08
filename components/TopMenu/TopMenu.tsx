@@ -6,6 +6,7 @@ import { MdOutlineDarkMode, MdShoppingCart, MdMenu } from "react-icons/md";
 import useBreakPoint from "../../hooks/useBreakPoint";
 import DarkModeButton from "../DarkModeButton";
 import { useState } from "react";
+import ShoppingCartButton from "../ShoppingCartButton";
 
 type Props = {};
 
@@ -46,13 +47,7 @@ const TopMenu: React.FC = ({}: Props) => {
         )}
         <div className={styles.iconsContainer}>
           <DarkModeButton />
-          <button
-            type="button"
-            title="Carrinho de Compras"
-            className={styles.iconButton}
-          >
-            <MdShoppingCart>Carrinho de Compras</MdShoppingCart>
-          </button>
+          <ShoppingCartButton />
         </div>
       </div>
       {expanded && (
