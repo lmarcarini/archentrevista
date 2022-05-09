@@ -19,7 +19,11 @@ const Category: NextPage = ({}: Props) => {
     }
   }, [router]);
 
-  return <div>{category && <SearchSection category={category} />}</div>;
+  return (
+    <div className={styles.main}>
+      {category && <SearchSection category={category} />}
+    </div>
+  );
 };
 
 export default Category;

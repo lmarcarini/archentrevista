@@ -20,20 +20,21 @@ const SearchSection = ({ category }: Props) => {
 
   const { products } = useFilter({ data: data || [], filter: filter });
 
-  if (isLoading) return <div>"Carregando..."</div>;
-
   return (
     <>
       <CategoriesBar />
-      <div className={styles.container}>
-        <div className={styles.row}>
-          {products.map((product) => (
-            <div className={styles.colItem} key={product.id}>
-              <ProductCard product={product} />
-            </div>
-          ))}
+      {(isLoading || isFetching) && <div>"Carregando..."</div>}
+      {!(isLoading || isFetching) && (
+        <div className={styles.container}>
+          <div className={styles.row}>
+            {products.map((product) => (
+              <div className={styles.colItem} key={product.id}>
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

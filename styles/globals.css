@@ -29,6 +29,7 @@ a {
   --card-box-shadow-hover: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
   --card-title-color: #222;
   --card-text-color: #222;
+  --nav-bar-hover: #D79D39;
 }
 
 [dark-theme="true"] {
@@ -44,4 +45,5 @@ a {
   --card-box-shadow-hover: 0px 0px 0px 0px rgb(255, 255, 255);
   --card-title-color: #fff;
   --card-text-color: #fff;
+  --nav-bar-hover: #7a571c;
 }
