@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 
 export const useProducts = (category?: String) =>
   useQuery(
-    category ? `products/${category}` : "products",
+    ["products", category],
     async () => {
       const { data } = await axios.get(
         category
