@@ -15,7 +15,6 @@ const ProductCard = ({ product }: Props) => {
         <div className={styles.cardBody}>
           <Image src={product.image} width={150} height={150} />
           <h5 className={styles.cardTitle}>{product.name}</h5>
-          <p className={styles.cardText}>{product.description}</p>
           <p className={styles.cardText}>
             <small className={styles.testMuted}>
               {toRealString(product.price)}

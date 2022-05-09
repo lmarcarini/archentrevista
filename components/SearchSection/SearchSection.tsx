@@ -1,51 +1,25 @@
 import ProductCard from "../ProductCard";
 import styles from "./SearchSection.module.css";
+import { useProducts } from "../../hooks/useProducts";
+import { useRouter } from "next/router";
+import { useFilter } from "../../hooks/useFilter";
 
-type Props = {};
+type Props = {
+  category?: string;
+};
 
-const SearchSection = (props: Props) => {
+const SearchSection = ({ category }: Props) => {
   // display a list of products
-  const products = [
-    {
-      id: "1",
-      name: "Produto 1",
-      description: "Descrição do produto 1",
-      price: 1,
-      image: "https://via.placeholder.com/150",
-      category: "camisetas",
-      stock: 10,
-      tags: [],
-      images: ["https://via.placeholder.com/150"],
-      videos: [],
-      options: {},
-    },
-    {
-      id: "2",
-      name: "Produto 2",
-      description: "Descrição do produto 2",
-      price: 2,
-      image: "https://via.placeholder.com/150",
-      category: "camisetas",
-      stock: 10,
-      tags: [],
-      images: ["https://via.placeholder.com/150"],
-      videos: [],
-      options: {},
-    },
-    {
-      id: "3",
-      name: "Produto 3",
-      description: "Descrição do produto 3",
-      price: 3,
-      image: "https://via.placeholder.com/150",
-      category: "camisetas",
-      stock: 10,
-      tags: [],
-      images: ["https://via.placeholder.com/150"],
-      videos: [],
-      options: {},
-    },
-  ];
+
+  const { isLoading, error, data, isFetching } = useProducts(category);
+
+  // get filter from url
+  const router = useRouter();
+  const filter = router.query.filtro || "";
+
+  const { products } = useFilter({ data: data || [], filter: filter });
+
+  if (isLoading) return <div>"Carregando..."</div>;
 
   return (
     <div className={styles.container}>

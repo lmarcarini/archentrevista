@@ -9,7 +9,7 @@ const nextConfig = {
     defaultLocale: "pt-br",
   },
   images: {
-    domains: ["localhost:3000", "via.placeholder.com"],
+    domains: ["localhost:3000", "via.placeholder.com", "fakestoreapi.com"],
   },
 };
 
