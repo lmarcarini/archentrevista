@@ -23,7 +23,7 @@ const SearchSection = ({ category }: Props) => {
   return (
     <>
       <CategoriesBar />
-      {(isLoading || isFetching) && <div>"Carregando..."</div>}
+      {(isLoading || isFetching) && <div>Carregando...</div>}
       {!(isLoading || isFetching) && (
         <div className={styles.container}>
           <div className={styles.row}>

@@ -19,7 +19,7 @@ const MainBanner: React.FC = ({}: Props) => {
       height: height,
       width: width,
     });
-  }, []);
+  }, [size.height, size.width]);
 
   return (
     <div className={styles.bannerContainer}>
