@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import SearchSection from "../../components/SearchSection";
+import styles from "../../styles/Category.module.css";
 
 type Props = {};
 
@@ -18,12 +19,7 @@ const Category: NextPage = ({}: Props) => {
     }
   }, [router]);
 
-  return (
-    <div>
-      <h1>{category}</h1>
-      {category && <SearchSection category={category} />}
-    </div>
-  );
+  return <div>{category && <SearchSection category={category} />}</div>;
 };
 
 export default Category;

@@ -1,7 +1,6 @@
 .container{
     width: 90%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -14,18 +13,24 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    padding: 20px;
 }
 
 .card{
     margin: 20px;
+    max-width: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border-color: var(--color-primary);
 }
 .card:hover{
     cursor: pointer;
 }
 
 .cardTitle{
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
+    text-overflow: clip;
+    margin:0px;
+    height: 4rem;
 }
