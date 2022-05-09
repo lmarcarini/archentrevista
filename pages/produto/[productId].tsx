@@ -33,6 +33,7 @@ const ProductPage: NextPage = ({}: Props) => {
           <button
             type="button"
             onClick={() => dispatch(adicionarItem({ ...data, quantity: 1 }))}
+            className={styles.addToCart}
           >
             Adicionar ao carrinho
           </button>

@@ -2,28 +2,35 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 export const useProducts = (category?: String) =>
-  useQuery("productsData", async () => {
-    const { data } = await axios.get(
-      category
-        ? `https://fakestoreapi.com/products/category/${category}`
-        : "https://fakestoreapi.com/products"
-    );
+  useQuery(
+    category ? `products/${category}` : "products",
+    async () => {
+      const { data } = await axios.get(
+        category
+          ? `https://fakestoreapi.com/products/category/${category}`
+          : "https://fakestoreapi.com/products"
+      );
 
-    const products: Product[] = data.map((product: any) => ({
-      id: product.id,
-      name: product.title,
-      price: product.price,
-      image: product.image,
-      category: product.category,
-      description: product.description,
-      tags: [],
-      images: [],
-      videos: [],
-      options: {},
-      stock: 3,
-    }));
-    return products || [];
-  });
+      const products: Product[] = data.map((product: any) => ({
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        image: product.image,
+        category: product.category,
+        description: product.description,
+        tags: [],
+        images: [],
+        videos: [],
+        options: {},
+        stock: 3,
+      }));
+      return products || [];
+    },
+    {
+      refetchOnWindowFocus: false,
+      refetchInterval: 0,
+    }
+  );
 
 export const useProduct = (id: number) =>
   useQuery(

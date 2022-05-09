@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import ShoppingCartTable from "../components/ShoppingCartTable";
 import { RootState } from "../store/store";
+import styles from "../styles/Carrinho.module.css";
 
 type Props = {};
 
@@ -14,7 +15,7 @@ const Carrinho = (props: Props) => {
   );
   return (
     <>
-      <div>
+      <div className={styles.main}>
         <h1>Carrinho</h1>
         {hasItens && <ShoppingCartTable />}
         {!hasItens && <p>Não há nenhum produto adicionado ao seu carrinho.</p>}
