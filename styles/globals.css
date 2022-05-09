@@ -30,6 +30,10 @@ a {
   --card-title-color: #222;
   --card-text-color: #222;
   --nav-bar-hover: #D79D39;
+  --table-head-background-color: #D79D39;
+  --table-head-text-color: #000;
+  --table-row-background-color: #494949;
+  --table-row-text-color: #fff;
 }
 
 [dark-theme="true"] {
@@ -40,10 +44,14 @@ a {
   --main-background-color: #222;
   --main-color: #fff;
   --alter-background-color: #d0d0d0;
-  --card-background-color: rgb(0, 0, 0);
+  --card-background-color: #494949;
   --card-box-shadow: 0px 0px 0px 0px #D79D39;
   --card-box-shadow-hover: 0px 0px 0px 0px #D79D39;
   --card-title-color: #fff;
   --card-text-color: #fff;
   --nav-bar-hover: #7a571c;
+  --table-head-background-color: #D79D39;
+  --table-head-text-color: #000;
+  --table-row-background-color: #494949;
+  --table-row-text-color: #fff;
 }

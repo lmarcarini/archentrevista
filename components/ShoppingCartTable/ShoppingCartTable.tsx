@@ -4,6 +4,7 @@ import { RootState } from "../../store/store";
 import QuantityButton from "../QuantityButton";
 import { adicionarItem } from "../../store/carrinhoComprasSlice";
 import { removerItem } from "../../store/carrinhoComprasSlice";
+import styles from "./ShoppingCartTable.module.css";
 
 type Props = {};
 
@@ -12,9 +13,9 @@ const ShoppingCartTable = (props: Props) => {
   const itens = useSelector((state: RootState) => state.carrinhoCompras.itens);
 
   return (
-    <div className="tableContainer">
-      <table>
-        <thead>
+    <div className={styles.tableContainer}>
+      <table className={styles.table}>
+        <thead className={styles.tableHead}>
           <tr>
             <th>Produto</th>
             <th>Preço</th>
@@ -24,7 +25,7 @@ const ShoppingCartTable = (props: Props) => {
         </thead>
         <tbody>
           {itens.map((item) => (
-            <tr key={item.id}>
+            <tr key={item.id} className={styles.tableRow}>
               <td>{item.name}</td>
               <td>{toRealString(item.price)}</td>
               <td>

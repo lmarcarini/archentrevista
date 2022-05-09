@@ -16,9 +16,9 @@ const ProductPage: NextPage = ({}: Props) => {
 
   const { isLoading, error, data, isFetching } = useProduct(Number(productId));
 
-  if (isLoading) return <div>Carregando...</div>;
+  if (isLoading) return <div className={styles.main}>Carregando...</div>;
 
-  if (!data) return <div>Não encontrado</div>;
+  if (!data) return <div className={styles.main}>Não encontrado</div>;
 
   return (
     <div className={styles.main}>

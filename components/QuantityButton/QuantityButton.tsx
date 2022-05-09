@@ -1,4 +1,5 @@
 import { MdAddCircleOutline, MdRemoveCircleOutline } from "react-icons/md";
+import styles from "./QuantityButton.module.css";
 
 type Props = {
   quantity: number;
@@ -11,16 +12,16 @@ const QuantityButton = ({ quantity, onIncrease, onDecrease }: Props) => {
     <div className="quantityButtonContainer">
       <button
         type="button"
-        className="quantityButton"
+        className={styles.quantityButton}
         title="Remove Item"
         onClick={onDecrease}
       >
         <MdRemoveCircleOutline />
       </button>
-      {quantity}
+      {" " + quantity + " "}
       <button
         type="button"
-        className="quantityButton"
+        className={styles.quantityButton}
         title="Adiciona Item"
         onClick={onIncrease}
       >

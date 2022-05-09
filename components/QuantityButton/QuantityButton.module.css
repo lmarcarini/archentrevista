@@ -1,0 +1,7 @@
+.quantityButton{
+    background-color: var(--highlight-color);
+    border: none;
+    border-radius: 50%;
+    font-size:1.25rem;
+    line-height: 1.25rem;
+}
