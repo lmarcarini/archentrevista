@@ -30,5 +30,13 @@
 .colItem{
     padding: 0;
     margin: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
+ @media (max-width: 600px) {
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

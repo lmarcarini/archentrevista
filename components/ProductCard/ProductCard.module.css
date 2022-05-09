@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width:200px;
     height: 100%;
     padding: 5px;
     margin: 0;
@@ -13,7 +13,7 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
-
+    background-color: var(--card-background-color);
 }
 .card:hover{
     box-shadow: var(--card-box-shadow-hover);
@@ -34,7 +34,7 @@
 }
 
 .cardTitle{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--card-title-color);
     margin: 0;
